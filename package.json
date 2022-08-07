@@ -1,6 +1,6 @@
 {
   "name": "json-case-convertor",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "JsonCaseConvertor can handle literraly any json object for case convertion. \r ## Features",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MIRTAHAALI/json-case-convertor"
+    "url": "https://github.com/MIRTAHAALI/json-case-convertor.git"
   }
 }
