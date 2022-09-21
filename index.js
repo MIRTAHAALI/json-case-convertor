@@ -17,7 +17,7 @@ const caseCondition = (origKey, keyCase) => {
 		newKey = _.snakeCase(origKey)
 	}
 	else if (keyCase == 'upper') {
-		newKey = _.upperCase(origKey).replace(/ /g, '')
+		newKey = _.upperCase(origKey)
 	}
 	else if (keyCase == 'constant') {
 		newKey = _.upperCase(origKey).replace(/ /g, '_')
@@ -29,7 +29,7 @@ const caseCondition = (origKey, keyCase) => {
 		newKey = _.lowerCase(origKey).replace(/ /g, '/')
 	}
 	else if (keyCase == 'lower') {
-		newKey = _.lowerCase(origKey).replace(/ /g, '')
+		newKey = _.lowerCase(origKey)
 	}
 	else if (keyCase == 'sentence') {
 		newKey = _.upperFirst(_.lowerCase(origKey));
