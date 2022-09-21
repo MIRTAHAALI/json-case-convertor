@@ -1,6 +1,6 @@
 {
   "name": "json-case-convertor",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "JsonCaseConvertor can handle literraly any json object for case convertion. \r ## Features",
   "main": "index.js",
   "scripts": {
