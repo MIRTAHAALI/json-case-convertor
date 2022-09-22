@@ -4,38 +4,40 @@ const _ = require('lodash');
 
 const caseCondition = (origKey, keyCase) => {
 	let newKey = null;
-	if (keyCase == 'pascal') {
-		newKey = _.startCase(_.camelCase(origKey)).replace(/ /g, '');//(origKey.charAt(0).toUpperCase() + origKey.slice(1) || origKey).toString()
-	}
-	else if (keyCase == 'camel') {
-		newKey = _.camelCase(origKey)
-	}
-	else if (keyCase == 'kebab') {
-		newKey = _.kebabCase(origKey)
-	}
-	else if (keyCase == 'snake') {
-		newKey = _.snakeCase(origKey)
-	}
-	else if (keyCase == 'upper') {
-		newKey = _.upperCase(origKey)
-	}
-	else if (keyCase == 'constant') {
-		newKey = _.upperCase(origKey).replace(/ /g, '_')
-	}
-	else if (keyCase == 'dot') {
-		newKey = _.lowerCase(origKey).replace(/ /g, '.')
-	}
-	else if (keyCase == 'path') {
-		newKey = _.lowerCase(origKey).replace(/ /g, '/')
-	}
-	else if (keyCase == 'lower') {
-		newKey = _.lowerCase(origKey)
-	}
-	else if (keyCase == 'sentence') {
-		newKey = _.upperFirst(_.lowerCase(origKey));
-	}
-	else if (keyCase == 'title') {
-		newKey = _.startCase(_.camelCase(origKey));
+	switch (keyCase){
+		case 'pascal':
+			newKey = _.startCase(_.camelCase(origKey)).replace(/ /g, '');//(origKey.charAt(0).toUpperCase() + origKey.slice(1) || origKey).toString()
+			break;
+		case 'camel':
+			newKey = _.camelCase(origKey)
+			break;
+		case 'kebab':
+			newKey = _.kebabCase(origKey)
+			break;
+		case 'snake':
+			newKey = _.snakeCase(origKey)
+			break;
+		case 'upper':
+			newKey = _.upperCase(origKey)
+			break;
+		case'constant':
+			newKey = _.upperCase(origKey).replace(/ /g, '_')
+			break;
+		case 'dot':
+			newKey = _.lowerCase(origKey).replace(/ /g, '.')
+			break;
+		case 'path':
+			newKey = _.lowerCase(origKey).replace(/ /g, '/')
+			break;
+		case 'lower':
+			newKey = _.lowerCase(origKey)
+			break;
+		case 'sentence':
+			newKey = _.upperFirst(_.lowerCase(origKey));
+			break;
+		case 'title':
+			newKey = _.startCase(_.camelCase(origKey));
+			break;
 	}
 	return newKey;
 }
