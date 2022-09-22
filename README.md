@@ -75,7 +75,7 @@ Output:
   car: 'ford_mustang',
   car2: null,
   prize: 2000,
-  other: [ 'sample1', 'sample2' ],
+  other: [ 'sample_1', 'sample_2' ],
   other2: { location: 'america', longitude1: 23.4, latitude1: 23.11 }
 }
 ```
@@ -94,7 +94,7 @@ Output:
   car: 'ford_mustang',
   car_2: null,
   prize: 2000,
-  other: [ 'sample1', 'sample2' ],
+  other: [ 'sample_1', 'sample_2' ],
   other_2: { location: 'america', longitude_1: 23.4, latitude_1: 23.11 }
 }
 ```
