@@ -80,6 +80,10 @@ function allConvertor(obj, keyCase) {
 			if (typeof value === "object") {
 				value = allConvertor(value, keyCase)
 			}
+			if (typeof value === 'string')
+			{
+				value = caseCondition(value, keyCase);
+			}
 			return value
 		})
 	} else {
@@ -113,6 +117,10 @@ function valueConvertor(obj, keyCase) {
 		return obj.map(function (value) {
 			if (typeof value === "object") {
 				value = valueConvertor(value, keyCase)
+			}
+			if (typeof value === 'string')
+			{
+				value = caseCondition(value, keyCase);
 			}
 			return value
 		})
