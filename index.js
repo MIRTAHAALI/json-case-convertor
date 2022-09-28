@@ -18,7 +18,7 @@ const caseCondition = (origKey, keyCase) => {
 			newKey = _.snakeCase(origKey)
 			break;
 		case 'upper':
-			newKey = _.upperCase(origKey)
+			newKey = _.toUpper(origKey)
 			break;
 		case'constant':
 			newKey = _.upperCase(origKey).replace(/ /g, '_')
@@ -30,7 +30,7 @@ const caseCondition = (origKey, keyCase) => {
 			newKey = _.lowerCase(origKey).replace(/ /g, '/')
 			break;
 		case 'lower':
-			newKey = _.lowerCase(origKey)
+			newKey = _.toLower(origKey)
 			break;
 		case 'sentence':
 			newKey = _.upperFirst(_.lowerCase(origKey));
