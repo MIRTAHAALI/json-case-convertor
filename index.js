@@ -60,7 +60,7 @@ function keyConvertor(obj, keyCase) {
 			if (obj.hasOwnProperty(origKey)) {
 				newKey = caseCondition(origKey, keyCase);
 				value = obj[origKey]
-				if (value instanceof Array || (value !== null && value.constructor === Object)) {
+				if (value instanceof Array || (value !== null && value !== undefined && value.constructor === Object)) {
 					value = keyConvertor(value, keyCase)
 				}
 				objectToSend[newKey] = value
@@ -92,7 +92,7 @@ function allConvertor(obj, keyCase) {
 			if (obj.hasOwnProperty(origKey)) {
 				newKey = caseCondition(origKey, keyCase);
 				value = obj[origKey]
-				if (value instanceof Array || (value !== null && value.constructor === Object)) {
+				if (value instanceof Array || (value !== null && value !== undefined && value.constructor === Object)) {
 					value = allConvertor(value, keyCase)
 				}
 				else {
@@ -129,7 +129,7 @@ function valueConvertor(obj, keyCase) {
 		for (origKey in obj) {
 			if (obj.hasOwnProperty(origKey)) {
 				value = obj[origKey]
-				if (value instanceof Array || (value !== null && value.constructor === Object)) {
+				if (value instanceof Array || (value !== null && value !== undefined && value.constructor === Object)) {
 					value = valueConvertor(value, keyCase)
 				}
 				else {
