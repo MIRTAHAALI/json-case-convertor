@@ -1,9 +1,10 @@
 # JsonCaseConvertor
 ## Convert any json object key name and values case
 
-
-
 JsonCaseConvertor can handle literraly any json object for case convertion. 
+
+Connect with author : [https://www.linkedin.com/in/mir-taha-a40bb270/]
+
 ## Features
 
 - Supported cases: Pascal, Camel, Snake, Kebab, Upper, Lower, Constant, Dot, Path, Sentence, Title
